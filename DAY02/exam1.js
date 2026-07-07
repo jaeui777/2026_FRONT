@@ -41,13 +41,13 @@ const 이름상자3 = 300
 이름상자3
 console.log(이름상자3)
 // 상수의 값 수정 , "불가능"
-이름상자3 = 100
+//이름상자3 = 100
 
 // 생각해보기
 let point1 = 50
 let point2 = 50
 let point3 = 100
-let point4 + point1 + point2 // 50 리터럴가 50리터럴 더해서 새로운 100 리터럴 변환
+let point4 = point1 + point2 // 50 리터럴가 50리터럴 더해서 새로운 100 리터럴 변환
 // 변수는 몇 개? 4
 // 리터럴 몇 개? 2개 (50 100)
 // 변수의 특징 : 저장(재사용) , 동일한 자료를 서로 다른 곳에 저장
@@ -55,3 +55,26 @@ let point4 + point1 + point2 // 50 리터럴가 50리터럴 더해서 새로운 
 let age = 10
 let speed = 100
 // 두 변수는 같은 리터럴 10 저장하지만 서로 다른 의미를 갖는 10 저장하는 변수 표현
+
+// 출력함수
+// 함수 : 자주 사용 되는 코드들을 정의하여 재사용/호출 , 내가만든함수VS남이만든함수
+// 1. console.log( 출력할자료 )
+console.log("안녕하세요")
+
+// 2. alert( 출력할자료 ) : 브라우저에서만 사용 가능    : 브라우저 알림창에 메세지 출력
+alert("안녕하세요2")
+
+//3 document.querrySelector("선택자") Selector(선택자) , inner (마크업사이)
+document.querySelector("h3").innerHTML = "혼자공부하는자바스크립트"
+
+
+//협력함수
+// 1. confirm (출력할메세지) : 브라우저 확인=true 취소=false 알림창
+let 결과1 = confirm()       // 입력받은 true 또는 false 변수에 저장
+console.log(결과1)
+
+// 2. prompt("출력할메세지") : 브라우저에 입력가능한 알림창, 입력 자료 반
+let 결과2 = prompt()
+console.log(결과2)
+
+// 코드는 매 쉬는시간 마다
