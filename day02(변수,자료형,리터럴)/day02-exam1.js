@@ -77,4 +77,4 @@ console.log(결과1)
 let 결과2 = prompt()
 console.log(결과2)
 
-// 코드는 매 쉬는시간 마다
+// 코드는 매 쉬는시간 마다 커밋
