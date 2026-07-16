@@ -19,7 +19,7 @@ body {
 /* 주문상세 제목 박스 */
 .제목박스 {
     background-color: gold;
-    padding: 15px;
+    padding:     15px;
     border-radius: 15px 15px 0 0;
 }
 
