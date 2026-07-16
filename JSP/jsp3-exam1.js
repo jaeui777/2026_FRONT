@@ -8,14 +8,15 @@
 // let fruitList = [ '사과', '바나나' ];
 // 사용자로부터 새로운 과일 이름을 입력받아, fruitList에 이미 존재하는 과일이면 '이미 존재하는 과일입니다.'를 출력하세요. 존재하지 않는 과일이면 배열에 추가한 뒤, 변경된 배열 전체를 출력하는 프로그램을 작성하시오.*/
 
-// let 과일이름 = prompt( ) // 1. 입력 2.저장
-// let 존재여부 = fruitList.includes( 과일이름  ) // 3.처리 : 입력받은 값이 fruitlist 존재하지
-// if ( 존재여부 ) {
-//     console.log( '이미 존재하는 과일입니다.')
-// } else{
-//     fruitList.push( 과일이름 )
-//     console.log( fruitList )
-// }
+let fruitList = ['사과', '바나나'];
+let 과일이름 = prompt('새로운 과일 이름을 입력하세요.');
+let 존재여부 = fruitList.includes(과일이름);
+if (존재여부) {
+    console.log('이미 존재하는 과일입니다.');
+} else {
+    fruitList.push(과일이름);
+    console.log(fruitList);
+}
 
 
 
@@ -23,14 +24,15 @@
 // 문제 2: 성별에 따른 색상 지정
 // 주민등록번호 13자리를 문자열로 입력받습니다. 성별을 나타내는 7번째 숫자가 '1' 또는 '3'이면 'blue'를, '2' 또는 '4'이면 'red'를 출력하는 
 // 프로그램을 작성하시오. */
-// let 주민등록번호 = prompt( )
-// console.log( 주민등록번호[7] ) // 문자열은 배열 취급
-// let 결과 = 주민등록번호[7] == 1 || 주민등록번호 [7] ==3 //3. 처리 : 7번째 숫자가 '1' 또는 '3'
-// // 4. 출력 (분기)
-// if(결과) {console.log('blue')}
-// else{ console.log('red')}
-
-
+let 주민등록번호 = prompt('주민등록번호 13자리를 입력하세요.');
+let 성별번호 = 주민등록번호[6];
+if (성별번호 == '1' || 성별번호 == '3') {
+    console.log('blue');
+} else if (성별번호 == '2' || 성별번호 == '4') {
+    console.log('red');
+} else {
+    console.log('잘못된 주민등록번호입니다.');
+}
 
 
 
@@ -42,11 +44,11 @@
 10,000원 이상 30,000원 미만: 1% 할인
 10,000원 미만: 할인 없음
 */
-// let 총구매금액 = Number(prompt('총 구매 금액'))
-// if(총구매금액 >= 50000) {console.log(총구매금액 -`${총구매금액}`*0.1)}
-// else if(총구매금액 >=30000) {console.log(총구매금액 -`${총구매금액}`*0.05)}
-// else if(총구매금액 >=10000) {console.log(총구매금액 -`${총구매금액}`*0.01)}
-// else {console.log(총구매금액)};
+let 총구매금액 = Number(prompt('총 구매 금액'))
+if(총구매금액 >= 50000) {console.log(총구매금액 -`${총구매금액}`*0.1)}
+else if(총구매금액 >=30000) {console.log(총구매금액 -`${총구매금액}`*0.05)}
+else if(총구매금액 >=10000) {console.log(총구매금액 -`${총구매금액}`*0.01)}
+else {console.log(총구매금액)};
 
 
 
@@ -71,16 +73,16 @@ else {console.log('잘못된 월입니다')}
 
 // // 문제 5: 세 수 중 가장 큰 수 찾기
 // // 서로 다른 세 개의 정수를 입력받아, 가장 큰 수를 출력하는 프로그램을 작성하시오.
-// let 정수 = parseInt ( '정수1' )
-// let 정수 = parseInt ( '정수2' )
-// let 정수 = parseInt ( '정수3' ) // 1. 입력받기 // 2. 저장하기
-// // 3. 처리, 가장 큰 수 찾기
-// // 3-1 : max 변수 선언 (가장 큰 수 담는 변수)
-// let max = 정수1 // 첫번째 값을 가장 큰 수 시작
-// // 3-2 : 두번 째 값이 max 보다 큰지 확인 , if~else if 아닌 if ~ if
-// if(max < 정수2) { max = 정수2 }
-// if(max < 정수3) { max = 정수3 }
-// console.log( max )
+let 정수 = parseInt ( '정수1' )
+let 정수 = parseInt ( '정수2' )
+let 정수 = parseInt ( '정수3' ) // 1. 입력받기 // 2. 저장하기
+// 3. 처리, 가장 큰 수 찾기
+// 3-1 : max 변수 선언 (가장 큰 수 담는 변수)
+let max = 정수1 // 첫번째 값을 가장 큰 수 시작
+// 3-2 : 두번 째 값이 max 보다 큰지 확인 , if~else if 아닌 if ~ if
+if(max < 정수2) { max = 정수2 }
+if(max < 정수3) { max = 정수3 }
+console.log( max )
 
 
 
@@ -94,33 +96,40 @@ else {console.log('잘못된 월입니다')}
 // 출력 예시: '2024년은 윤년입니다.' 또는 '2023년은 평년입니다.'
 // */
 
+let 연도 = Number(prompt('연도를 입력하세요.'));
+if ((연도 % 4 == 0 && 연도 % 100 != 0) || 연도 % 400 == 0) {
+    console.log(`${연도}년은 윤년입니다.`);
+} else {
+    console.log(`${연도}년은 평년입니다.`);
+}
+ 
+
+
+/*
 // // 문제 7: 세 수 오름차순 정렬
 // // 서로 다른 세 개의 정수를 입력받아, 오름차순(작은 수부터 큰 수 순서)으로 정렬하여 출력하는 프로그램을 작성하시오.
 // // 예시: 17, 4, 8 입력 시 4, 8, 17 출력
-// // 스왑 ( 두 변수간 값 교체 ) *변수특징: * 하나의 값* 저장
+// // 스왑 ( 두 변수간 값 교체 ) *변수특징: * 하나의 값* 저장 */
 
-// /*
-// let 정수1 = Number( prompt() )
-// let 정수2 = Number( prompt() )
-// let 정수3 = Number( prompt() )
-// // 3. 처리 17, 4, 8
-// // 1. 정수1 -> 정수2, 비교하고 만약에 정수1이 더 크면 자리 바꾸기
-// if( 정수1 > 정수2 ) { //만약에 오름차순이 아닌 내림차순이면 < 부
-//     // temp = 17 , 정수1=17 , 정수2=4 
-//     let temp = 정수1 // 두 변수간의 값 스왑/교체 하기 위한 임시 저장소
-//     // temp = 17 , 정수1=4* , 정수2=4
-//     정수1 = 정수2   
-//     // temp = 17 , 정수1=4* , 정수2=17
-//     정수2 = temp;
-// }
 
-// // 1. 정수1 -> 정수3, 비교하고 만약에 정수1이 더 크면 자리 바꾸기
-// if( 정수1 > 정수3 ) {let temp = 정수1; 정수1=정수3; 정수3=temp;}
-
-// // 1. 정수2 -> 정수3, 비교하고 만약에 정수1이 더 크면 자리 바꾸기
-// if( 정수2 > 정수3 ) {let temp = 정수2; 정수2=정수3; 정수3=temp; }
-
-// console.log( `${정수1} ${ 정수2 } ${ 정수3 }`) */
+let 정수1 = Number( prompt() )
+let 정수2 = Number( prompt() )
+let 정수3 = Number( prompt() )
+// 3. 처리 17, 4, 8
+// 1. 정수1 -> 정수2, 비교하고 만약에 정수1이 더 크면 자리 바꾸기
+if( 정수1 > 정수2 ) { //만약에 오름차순이 아닌 내림차순이면 < 부
+    // temp = 17 , 정수1=17 , 정수2=4 
+    let temp = 정수1 // 두 변수간의 값 스왑/교체 하기 위한 임시 저장소
+    // temp = 17 , 정수1=4* , 정수2=4
+    정수1 = 정수2   
+    // temp = 17 , 정수1=4* , 정수2=17
+    정수2 = temp;
+}
+// 1. 정수1 -> 정수3, 비교하고 만약에 정수1이 더 크면 자리 바꾸기
+if( 정수1 > 정수3 ) {let temp = 정수1; 정수1=정수3; 정수3=temp;}
+// 1. 정수2 -> 정수3, 비교하고 만약에 정수1이 더 크면 자리 바꾸기
+if( 정수2 > 정수3 ) {let temp = 정수2; 정수2=정수3; 정수3=temp; }
+console.log( `${정수1} ${ 정수2 } ${ 정수3 }`) 
 // /*
 // 문제 8: 가위바위보 게임
 // 두 명의 플레이어가 참여하는 가위바위보 게임을 만드시오.
@@ -135,37 +144,32 @@ else {console.log('잘못된 월입니다')}
 // 두 플레이어가 같은 것을 내면 '무승부'를 출력합니다.
 // */
 
-// let player1 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
-// let player2 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
-// // 처리 :
-// // 플레이어1 이기는 수 : if(player == 0 && player == 2 || player1 == 1 && player2 == 0 || player1 == 2 && player1 == 1)
-// // 비기는 수 : player1 == player2
-// //그 외 플레이어2 : 그외
+let player1 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
+let player2 = Number(prompt("플레이어 1 \n 가위(0), 바위(1), 보(2) 입력"));
+// 처리 :
+// 플레이어1 이기는 수 : if(player == 0 && player == 2 || player1 == 1 && player2 == 0 || player1 == 2 && player1 == 1)
+// 비기는 수 : player1 == player2
+//그 외 플레이어2 : 그외
 
-// if ( player1 ==  (player2+1) % 3 ) {console.log('플레이어1 승리')}
-// else if (player1 == player2) {console.log('')}
+if ( player1 ==  (player2+1) % 3 ) {console.log('플레이어1 승리')}
+else if (player1 == player2) {console.log('')}
+if (player1 == 0) { // 1. 플레이어1 가위 일때
+  if (player2 == 0 ) console.log("비김"); // 1.플레이어1 가위 일때
+    //if 중첩
+    if (player2 == 0 ) console.log("비김"); 
+  else if (player1 == 1) console.log("플레이어2 승리");
+  else if (player2 == 2) console.log("플레이어1 승리");
 
+} else if (player1 == 1) { // 2. 플레이어1 바위 일 때
+  if (player1 - player2 == 1) console.log("플레이어1 승리");
+  else if (player1 - player2 == 0) console.log("무승부");
+  else if (player1 - player2 == -1) console.log("플레이어2 승리");
+} else if (player1 == 2) {
+  if (player1 - player2 == 2) console.log("플레이어2 승리");
+  else if (player1 - player2 == 1) console.log("플레이어1 승리");
+  else if (player1 - player2 == 0) console.log("무승부");
+}
 
-
-// /*
-// if (player1 == 0) { // 1. 플레이어1 가위 일때
-//   if (player2 == 0 ) console.log("비김"); // 1.플레이어1 가위 일때
-//     //if 중첩
-//     if (player2 == 0 ) console.log("비김"); 
-//   else if (player1 == 1) console.log("플레이어2 승리");
-//   else if (player2 == 2) console.log("플레이어1 승리");
-
-
-// } else if (player1 == 1) { // 2. 플레이어1 바위 일 때
-//   if (player1 - player2 == 1) console.log("플레이어1 승리");
-//   else if (player1 - player2 == 0) console.log("무승부");
-//   else if (player1 - player2 == -1) console.log("플레이어2 승리");
-// } else if (player1 == 2) {
-//   if (player1 - player2 == 2) console.log("플레이어2 승리");
-//   else if (player1 - player2 == 1) console.log("플레이어1 승리");
-//   else if (player1 - player2 == 0) console.log("무승부");
-// }
-// */
 
 
 
