@@ -12,7 +12,7 @@
 
 /* 자주 사용되는 기본css */
 *{
-    box-sizing: border-box; /*content+padding 포함 사이즈 정의*/
+    box-sizing: border-box; 
     padding: 0px; margin: 0px; /*기본 여백 제거*/
 
 }

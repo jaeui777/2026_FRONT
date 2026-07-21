@@ -1,0 +1,57 @@
+#footer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 35px 0;
+    background-color: #333;
+    color: #cccccc;
+}
+
+.footer-inner {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 왼쪽(회사 정보) */
+.footer-left h2 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 22px;
+}
+
+.footer-left p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* 저작권 */
+.copyright {
+    margin-top: 15px;
+    color: #888888;
+    font-size: 12px;
+}
+
+/* SNS 이미지 전체 영역 */
+.sns {
+    display: flex;
+    align-items: center;
+    gap : 15px
+}
+
+/* SNS 링크 영역 */
+.sns a {
+    width: 40px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SNS 이미지 크기 */
+.sns img {
+    width: 200%;
+    height: 40px;
+    display: block;
+}
