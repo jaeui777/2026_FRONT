@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>사원 휴가 관리</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type='text/css' media='screen' href="js practice9.css">
+</head>
+
+<body>
+
+
+    <div id="page">
+        <div id="wrap">
+            <div id="top">
+                <h2>사원 휴가 신청</h2>
+
+                <div class="inputBox">
+
+                    <h5>신청 사원</h5>
+ 
+                    <select class="pname">
+                        <option value="disabled">
+                            휴가 신청 사원을 선택하세요
+                        </option>
+                        <option value="11">김민준</option>
+                        <option value="21">이서연</option>
+                        <option value="31">박도윤</option>
+                    </select>
+
+                </div>
+
+
+                <!--휴가 시작 및 종료-->
+                <div class="dateBox">
+
+                    <div>
+                        <h5>휴가 시작일</h5>
+                        <input type="date" class="startDate">
+                    </div>
+
+                    <div>
+                        <h5>휴가 종료일</h5>
+                        <input type="date" class="endDate">
+                    </div> 
+
+                </div>
+
+
+                <!-- 휴가 사유 -->
+                <div class="inputBox">
+
+                    <h5>휴가 사유</h5>
+
+                    <input
+                        type="text"
+                        class="reason"
+                        placeholder="예: 여름 휴가"
+                    >
+
+                </div>
+
+
+                <!-- 신청 버튼 -->
+                <button class ="vacationAdd">신청</button>
+            </div>
+
+
+            
+            <div id="main">
+                <h2>휴가 신청 전체 목록</h2>
+
+                <!-- 자바스크립트로 휴가 목록 출력 -->
+                <div id="vacationListBox"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js practice9.js"></script>
+
+</body>
+
+</html>
