@@ -1,0 +1,29 @@
+a{ text-decoration: none; color: black;}
+a:hover{ color: red;}
+a:visited{ color: yellow;}
+a:active{ color : blue}
+
+.box1::before{ content: "[가상요소 '앞 구역]"}
+.box1::after{ content: "[가상요소 '뒤 구역]"}
+
+
+li{ list-style-type: none;}
+.box2 > li::before{ content:  "😍";}
+.box2 > li:after{ content : url("../day14/초대형거인.jpg"); }
+
+#header{background-color: beige;}
+#header > ul{
+    display : flex; justify-content: center;}
+
+.mainmenu > li{padding: 10px; position: relative;}
+.submenu{
+        position: absolute;
+        top: 10px; 
+        padding: 10px;
+        background-color: beige;
+        width: 50px;
+        display: none; /*숨기기*/
+
+    }
+/* li 에 hover(마우스 올렸을때) 서브메뉴의 display 표시한다. */
+    .mainmenu > li::hover.submenu{ display: block; }

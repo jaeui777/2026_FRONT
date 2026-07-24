@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    width: 900px;
+    height: 580px;
+    margin: 50px auto;
+    background-color: red;
+
+    /* 노란 상자의 기준 위치 */
+    position: relative;
+}
+
+.box {
+    width: 130px;
+    height: 90px;
+
+    background-color: yellow;
+    border-radius: 15px;
+
+    font-size: 18px;
+    text-align: center;
+
+    /* 글자를 가로·세로 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 각각 원하는 위치에 배치 */
+    position: absolute;
+}
+
+
+.box1 {
+    top: 60px;
+    left: 385px;
+}
+
+
+.box2 {
+    top: 150px;
+    left: 180px;
+}
+
+.box3 {
+    top: 150px;
+    right: 180px;
+}
+
+.box4 {
+    top: 340px;
+    left: 180px;
+}
+
+.box5 {
+    top: 340px;
+    right: 180px;
+}
+
+.box6 {
+    bottom: 60px;
+    left: 385px;
+}
